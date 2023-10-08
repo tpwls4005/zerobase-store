@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>매장 등록</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div class="store-registration-container">
+    <h2>매장 등록</h2>
+    <form class="store-registration-form" action="/api/stores/register" method="POST">
+        <div class="form-group">
+            <label for="name">매장 이름:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="address">주소:</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+        <!-- 다른 필드들 추가 가능 -->
+
+        <div class="form-group">
+            <button type="submit">등록</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
