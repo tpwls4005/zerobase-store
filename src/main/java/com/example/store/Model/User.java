@@ -1,4 +1,4 @@
-package Model;
+package com.example.store.Model;
 
 import javax.persistence.*;
 
@@ -19,5 +19,5 @@ public class User {
     @Column(nullable = false)
     private String email;
 
-    // getter, setter 및 다른 필드들
+
 }

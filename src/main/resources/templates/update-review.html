@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>리뷰 수정</title>
 </head>
 <body>
-$END$
+<h1>리뷰 수정</h1>
+
+<form th:action="@{'/api/reviews/' + ${review.id}}" method="put">
+    <label for="title">제목:</label>
+    <input type="text" id="title" name="title" th:value="${review.title}" required>
+
+    <br>
+
+    <label for="content">내용:</label>
+    <textarea id="content" name="content" required th:text="${review.content}"></textarea>
+
+    <br>
+
+    <label for="rating">평점:</label>
+    <input type="number" id="rating" name="rating" min="1" max="5" required th:value="${review.rating}">
+
+    <br>
+
+    <button type="submit">리뷰 수정</button>
+</form>
+
+<a th:href="@{'/api/reviews/list'}">리뷰 목록으로 돌아가기</a>
 </body>
 </html>

@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>리뷰 목록</title>
 </head>
 <body>
-$END$
+<h1>리뷰 목록</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>제목</th>
+        <th>평점</th>
+        <th>조회</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="review : ${reviews}">
+        <td th:text="${review.id}"></td>
+        <td th:text="${review.title}"></td>
+        <td th:text="${review.rating}"></td>
+        <td><a th:href="@{'/api/reviews/' + ${review.id}}">조회</a></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>

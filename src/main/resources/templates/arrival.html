@@ -1,10 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>도착 서비스</title>
 </head>
 <body>
-$END$
+<h1>도착 서비스</h1>
+
+<!-- 도착 확인 -->
+<h2>도착 확인</h2>
+<form action="/api/arrivals/confirm" method="POST">
+    <label for="reservationId">Reservation ID:</label>
+    <input type="text" id="reservationId" name="reservationId">
+    <button type="submit">도착 확인</button>
+</form>
+
+<!-- 도착 목록 조회 -->
+<h2>도착 목록 조회</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Reservation ID</th>
+        <th>확인 여부</th>
+    </tr>
+    </thead>
+    <tbody>
+    <th:block th:each="arrival : ${arrivals}">
+        <tr>
+            <td th:text="${arrival.id}">ID</td>
+            <td th:text="${arrival.reservationId}">Reservation ID</td>
+            <td th:text="${arrival.confirmed}">확인 여부</td>
+        </tr>
+    </th:block>
+    </tbody>
+</table>
+
+<!-- 예외 메시지 -->
+<div th:if="${errorMessage}" class="error">
+    <p th:text="${errorMessage}">오류 메시지</p>
+</div>
 </body>
 </html>

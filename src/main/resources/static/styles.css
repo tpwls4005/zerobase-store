@@ -1,0 +1,66 @@
+/* styles.css */
+
+/* 제목 스타일 */
+h1 {
+    font-size: 36px; /* 대형 제목 폰트 크기 */
+    color: #ff6f61; /* 레스토랑 테마 색상 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* 제목에 그림자 효과 추가 */
+}
+
+/* 링크 스타일 */
+a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: #ff6f61; /* 레스토랑 테마 색상 */
+    transition: color 0.3s ease; /* 부드러운 색상 전환 애니메이션 */
+}
+
+a:hover {
+    color: #ff402c; /* 호버 시 더 선명한 색상으로 변경 */
+}
+
+/* 테이블 스타일 */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px; /* 테이블 아래 여백 추가 */
+    background-color: #fff; /* 테이블 배경색 추가 */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 테이블 그림자 효과 */
+}
+
+th, td {
+    padding: 12px; /* 텍스트 패딩 조정 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    border-bottom: 1px solid #ddd; /* 테이블 아래 테두리 추가 */
+}
+
+th {
+    background-color: #ff6f61; /* 테이블 헤더 배경색 */
+    color: #fff; /* 테이블 헤더 텍스트 색상 */
+}
+
+/* 버튼 스타일 */
+button {
+    background-color: #ff6f61; /* 버튼 배경색 설정 */
+    color: #fff; /* 버튼 텍스트 색상 설정 */
+    padding: 12px 24px; /* 패딩 조정 */
+    border: none;
+    cursor: pointer;
+    border-radius: 4px; /* 둥근 모서리 */
+    transition: background-color 0.3s ease; /* 배경색 전환 애니메이션 */
+}
+
+button:hover {
+    background-color: #ff402c; /* 호버 시 더 선명한 색상으로 변경 */
+}
+
+/* 폼 스타일 */
+.form-group {
+    margin-bottom: 24px; /* 폼 그룹 아래 여백 추가 */
+}
+
+/* 오류 메시지 스타일 */
+.error {
+    color: #ff0000; /* 오류 메시지 색상 설정 */
+    font-weight: bold; /* 오류 메시지 텍스트를 굵게 표시 */
+    margin-top: 8px; /* 오류 메시지 위쪽 여백 추가 */
+}

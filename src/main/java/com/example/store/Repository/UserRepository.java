@@ -1,17 +1,14 @@
 
-package Repository;
+package com.example.store.Repository;
 
-import Model.User;
+import com.example.store.Model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-
-
-    // UserRepository.java
+@Repository
     public interface UserRepository extends JpaRepository<User, Long> {
         User findByUsername(String username);
     }
-
-    // UserService.java (다른 패키지에 위치)
 
 
 

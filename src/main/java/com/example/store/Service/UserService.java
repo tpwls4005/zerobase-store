@@ -1,7 +1,7 @@
-package Service;
+package com.example.store.Service;
 
-import Model.User;
-import Repository.UserRepository;
+import com.example.store.Model.User;
+import com.example.store.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,5 +18,7 @@ public class UserService {
         userRepository.save(user);
     }
 
-    // 다른 사용자 관련 비즈니스 로직들
+    public User getUserByUsername(String username) {
+        return userRepository.findByUsername(username);
+    }
 }

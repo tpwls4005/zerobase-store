@@ -1,0 +1,49 @@
+src/
+├── main/
+│   ├── java/
+│   │   └── com/
+│   │       └── app/
+│   │           ├── controller/
+│   │           │   ├── UserController.java
+│   │           │   ├── StoreController.java
+│   │           │   ├── ReservationController.java
+│   │           │   ├── ArrivalController.java
+│   │           │   ├── ReviewController.java
+│   │           │   └── ...
+│   │           ├── service/
+│   │           │   ├── UserService.java
+│   │           │   ├── StoreService.java
+│   │           │   ├── ReservationService.java
+│   │           │   ├── ArrivalService.java
+│   │           │   ├── ReviewService.java
+│   │           │   └── ...
+│   │           ├── repository/
+│   │           │   ├── UserRepository.java
+│   │           │   ├── StoreRepository.java
+│   │           │   ├── ReservationRepository.java
+│   │           │   ├── ReviewRepository.java
+│   │           │   └── ...
+│   │           ├── model/
+│   │           │   ├── User.java
+│   │           │   ├── Store.java
+│   │           │   ├── Reservation.java
+│   │           │   ├── Review.java
+│   │           │   └── ...
+│   │           └── YourAppApplication.java
+│   └── resources/
+│       ├── static/
+│       │   ├── css/
+│       │   ├── js/
+│       │   └── ...
+│       ├── templates/
+│       │   ├── user-registration.html
+│       │   ├── store-registration.html
+│       │   ├── reservation-list.html
+│       │   ├── reservation-details.html
+│       │   ├── arrival-confirmation.html
+│       │   ├── review-form.html
+│       │   └── ...
+│       ├── application.properties
+│       └── ...
+└── test/
+    └── ...

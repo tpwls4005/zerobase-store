@@ -1,2 +1,13 @@
-package com.example.store.Repository;public class ReviewRepository {
+package com.example.store.Repository;
+
+import com.example.store.Model.Review;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface ReviewRepository extends JpaRepository<Review, Long> {
+    List<Review> findByTitle(String title);
+
 }

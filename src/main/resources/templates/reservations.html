@@ -1,10 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>예약 목록</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-$END$
+<div class="reservation-list-container">
+  <h2>예약 목록</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>예약 번호</th>
+      <th>예약 세부 정보</th>
+      <!-- 다른 필드들 추가 가능 -->
+    </tr>
+    </thead>
+    <tbody>
+    <!-- 예약 목록을 반복해서 표시 -->
+    <tr th:each="reservation : ${reservations}">
+      <td th:text="${reservation.id}"></td>
+      <td th:text="${reservation.reservationDetails}"></td>
+      <!-- 다른 필드들 추가 가능 -->
+    </tr>
+    </tbody>
+  </table>
+</div>
 </body>
 </html>
